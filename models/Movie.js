@@ -5,11 +5,13 @@ const movieSchema = new Schema(
     title: String,
     genre: String,
     plot: String,
-    cast: {
-      type: Schema.Types.ObjectId,
-      // this is the name of the model that the _id refers to
-      ref: 'Celebrity',
-    },
+    cast: [
+      {
+        type: Schema.Types.ObjectId,
+        // this is the name of the model that the _id refers to
+        ref: 'Celebrity',
+      },
+    ],
   },
   {
     timestamps: true,

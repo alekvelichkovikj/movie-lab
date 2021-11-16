@@ -43,7 +43,7 @@ router.get('/movies/:id/edit', (req, res, next) => {
   })
 })
 
-router.post('/movies/:id/edit', (req, res, next) => {
+router.post('/movies/:id', (req, res, next) => {
   const id = req.params.id
   const { title, genre, plot } = req.body
 
