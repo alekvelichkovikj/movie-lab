@@ -1,0 +1,33 @@
+<h1>These Are The Movies 🍿</h1>
+{{#each movieList}}
+
+  <h2>{{title}}</h2>
+
+  <p>
+    Genre:
+    {{genre}}
+  </p>
+
+  <p>
+    Plot:
+    {{plot}}
+  </p>
+
+  <p>Cast:
+    <ul>
+
+      <li>{{cast.name}}</li>
+
+    </ul>
+  </p>
+
+  <a href='movies/{{_id}}/edit' class='btn-border'>Edit this Movie ✏️</a>
+  <br />
+
+{{/each}}
+
+<br /><br />
+<a href='/movies/new' class='btn' style='font-size: 20px;'>Create a new Movie 🎥
+</a>
+<br /><br />
+<a href='/' class='btn'>👈🏼 Go back to home page</a>

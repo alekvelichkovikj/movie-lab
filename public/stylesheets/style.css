@@ -18,6 +18,14 @@ a.btn {
   padding: 10px 20px;
 }
 
+a.btn-border {
+  text-decoration: none;
+  color: #3f3f3f;
+  border: 2px solid #3f3f3f;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
 h1 {
   color: 15px;
 }
