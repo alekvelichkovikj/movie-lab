@@ -38,12 +38,14 @@ router.post('/movies', (req, res, next) => {
 
 // Edit Movie
 router.get('/movies/:id/edit', (req, res, next) => {
-  Movie.findById(req.params.id).then((movie) => {
-    res.render('movies/editMovie', { movie })
-  })
+  Movie.findById(req.params.id)
+    .populate('cast')
+    .then((movie) => {
+      res.render('movies/editMovie', { movie })
+    })
 })
 
-router.post('/movies/:id', (req, res, next) => {
+router.post('/movies/:id/', (req, res, next) => {
   const id = req.params.id
   const { title, genre, plot } = req.body
 
